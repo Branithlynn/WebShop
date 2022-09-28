@@ -1,0 +1,12 @@
+﻿@using WebShop.Services;
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    @if(AuthenticationService.LoggedUser!=null){
+        <h1 class="display-4">@AuthenticationService.LoggedUser.Username</h1>
+    }
+    
+</div>

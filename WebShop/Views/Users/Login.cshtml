@@ -1,0 +1,47 @@
+﻿@{
+    ViewData["Title"] = "Login";
+}
+<html>
+<head>
+    <title>
+        Login
+    </title>
+</head>
+<body>
+    <fieldset>
+        <center>
+            <legend>Login</legend>
+            <form action="/Users/Login" method="post" autocomplete="off">
+                <div>
+                    <div>
+                        <div>
+                            Username:
+                        </div>
+                        <div>
+                            <input type="text" name="Username" value="@ViewData["username"]" />
+                            <span>@ViewData["usernameError"]</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            Password:
+                        </div>
+                        <div>
+                            <input type="password" name="Password" value="@ViewData["password"]" />
+                            <span>@ViewData["passwordError"]</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <div>
+                                <a href="/Home/Index">Back</a>
+                                <input type="submit" value="Save" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </center>
+    </fieldset>
+</body>
+</html>

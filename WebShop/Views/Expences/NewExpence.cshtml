@@ -1,0 +1,46 @@
+﻿<html>
+<head>
+    <title>
+        New Expence
+    </title>
+    <link rel="stylesheet" href="/css/site.css" />
+</head>
+<body>
+    <fieldset>
+        <center>
+            <legend>New</legend>
+            <form action="/Expences/NewExpence" method="post">
+                <div>
+                    <div>
+                        <div>
+                            Name:
+                        </div>
+                        <div>
+                            <input type="text" name="Name" value="@ViewData["Name"]" autocomplete="new-password" />
+                            <span>@ViewData["nameError"]</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            Price:
+                        </div>
+                        <div>
+                            <input type="text" name="Price" value="@ViewData["Price"]" autocomplete="new-password" />
+                            <span>@ViewData["priceError"]</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <div>
+                                <a href="/Expences/Index">Back</a>
+                                <input type="submit" value="Save" />
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+        </center>
+    </fieldset>
+</body>
+</html>

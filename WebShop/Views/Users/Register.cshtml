@@ -1,0 +1,58 @@
+﻿@{
+    ViewData["Title"] = "Register";
+}
+<html>
+<head>
+    <title>
+        Register
+    </title>
+    <link rel="stylesheet" href="/css/site.css" />
+</head>
+<body>
+    <fieldset>
+        <center>
+            <legend>Register</legend>
+            <form action="/Users/Register" method="post">
+                <div>
+                    <div>
+                        <div>
+                            Name:
+                        </div>
+                        <div>
+                            <input type="text" name="Name" value="@ViewData["name"]" />
+                            <span>@ViewData["nameError"]</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            Username:
+                        </div>
+                        <div>
+                            <input type="text" name="Username" value="@ViewData["username"]" autocomplete="new-password" />
+                            <span>@ViewData["usernameError"]</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            Password:
+                        </div>
+                        <div>
+                            <input type="password" name="Password" value="@ViewData["password"]" autocomplete="new-password" />
+                            <span>@ViewData["passwordError"]</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <div>
+                                <a href="/Home/Index">Back</a>
+                                <input type="submit" value="Save" />
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+        </center>
+    </fieldset>
+</body>
+</html>

@@ -1,0 +1,35 @@
+﻿@using WebShop.Services
+
+<head>
+    <link rel="stylesheet" href="/css/site.css" />
+</head>
+<body>
+    <fieldset class="lessBorders ">
+        <div>
+            @if (AuthenticationService.LoggedUser == null)
+            {
+                <a class="containerLeft important" href="/Home/Index"><strong>Home</strong></a>
+                <a class="containerRight" href="/Users/Login"><button>Login</button></a>
+                <a class="containerRight" href="/Users/Register"><button>Register</button></a>
+            }
+            else if (AuthenticationService.LoggedUser.isAdmin)
+            {
+                <a class="containerLeft important" href="/AdminView/Index"><strong>Home</strong></a>
+                <a class="containerRight" href="/Expences/Index"><button>Expences</button></a>
+                <a class="containerRight" href="/MyItems/Index"><button>MyItems</button></a>
+                <h3 class="userNameWriteHead">@AuthenticationService.LoggedUser.Name</h3>
+            }
+            else
+            {
+                <a class="containerRight" href="/Expences/Index"><button>Expences</button></a>
+                <a class="containerRight" href="/MyItems/Index"><button>MyItems</button></a>
+                <h3 class="userNameWriteHead">@AuthenticationService.LoggedUser.Name</h3>
+            }
+
+
+        </div>
+    </fieldset>
+</body>
+<div class="container">
+    @RenderBody()
+</div>
